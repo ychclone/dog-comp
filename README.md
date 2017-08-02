@@ -1,16 +1,15 @@
 DOG
 ===
-[![Build Status](https://drone.io/github.com/qc1iu/dog-comp/status.png)](https://drone.io/github.com/qc1iu/dog-comp/latest)
 
 The Dog compiler. Copyright (C) 2015, CSS of USTC.
 
 `Dog` is a **MiniJava lanuage**(see [Tiger book](http://www.cs.princeton.edu/~appel/modern/java/) Appendix MiniJava Language
 Reference Manual) compile implement in **`Golang`**. Just for fun, it has a garbage collector using copy collection algorithm and CFG-based Optimizations.
 
-##System Require
+## System Require
 Ubuntu14.04 32bit
 
-##Getting Start
+## Getting Start
 
 ### compile to C programming language
 use 
@@ -41,7 +40,7 @@ can compile LinkedList.java to a.c. And you can compile this C source file with 
 		-help                               show this help information
 
 
-###Play In Runtime
+### Play In Runtime
 
 Since the evaluation order of the argument list, when using `clang`, need add the compile options **`__CLANG__`**
 	
@@ -77,11 +76,11 @@ and then do some optimization
 
 
 
-##GC Support
+## GC Support
 
 In tiger, we use a gc named **Gimple garbage collector**, whitch means `gc is simple`. And we use the algorithm called [Cheney's algorithm](https://en.wikipedia.org/wiki/Cheney's_algorithm) which uses a breadth-first strategy.
 
-###Object Model
+### Object Model
 
 An object model is the strategy that how an object can be laid out in memory (the heap). A good object model should support all kinds of possible operations efficiently on an object: virtual method dispatching, locking, garbage collection, etc., whereas at the same time be as compact as possible to save storage. 
 
@@ -129,7 +128,7 @@ There are two different forms of objects in MiniJava: normal objects and (intege
 
 
 
-###command-line
+### command-line
 
 	-heapSize <n>            set the Java heap size (in bytes)
 	-verbose {0|1|2|3}       trace method execuated
